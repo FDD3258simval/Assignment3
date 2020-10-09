@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
     MPI_Comm_size(MPI_COMM_WORLD,&size);
     
     srand(time(NULL) + 123456789 + rank*SEED); // Important: Multiply SEED by "rank" when you introduce MPI!
-    int count_vec[size-1];
+    int count_vec[size];
 
     // Split the work !
     if (rank == 0) {   
@@ -55,8 +55,7 @@ int main(int argc, char* argv[])
     if (rank == 0){
 	 // first, consider rank0 contribution
 	     int global_count = 0;
-	     global_count += local_count;
-	     for (i=0; i < size-1; i++) { // Sum up the contributions (from rank 0 already considered)
+	     for (i=0; i < size; i++) { // Sum up the contributions (from rank 0 already considered)
 	         global_count += count_vec[i]; 
 	     }
 	     // Estimate Pi and display the result

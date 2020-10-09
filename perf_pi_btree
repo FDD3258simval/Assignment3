@@ -1,0 +1,50 @@
+  8 processes: pi ~ 3.141576, time:  4.217
+  8 processes: pi ~ 3.141607, time:  4.739
+  8 processes: pi ~ 3.141570, time:  4.272
+  8 processes: pi ~ 3.141579, time:  4.748
+  8 processes: pi ~ 3.141525, time:  4.778
+  8 processes: pi ~ 3.141610, time:  4.265
+  8 processes: pi ~ 3.141608, time:  4.809
+  8 processes: pi ~ 3.141613, time:  4.234
+  8 processes: pi ~ 3.141546, time:  4.261
+  8 processes: pi ~ 3.141603, time:  4.817
+ 16 processes: pi ~ 3.141638, time:  2.653
+ 16 processes: pi ~ 3.141586, time:  2.648
+ 16 processes: pi ~ 3.141655, time:  2.645
+ 16 processes: pi ~ 3.141643, time:  2.306
+ 16 processes: pi ~ 3.141562, time:  2.309
+ 16 processes: pi ~ 3.141491, time:  2.643
+ 16 processes: pi ~ 3.141524, time:  2.622
+ 16 processes: pi ~ 3.141613, time:  2.645
+ 16 processes: pi ~ 3.141642, time:  2.651
+ 16 processes: pi ~ 3.141614, time:  2.662
+ 32 processes: pi ~ 3.141519, time:  1.319
+ 32 processes: pi ~ 3.141576, time:  1.291
+ 32 processes: pi ~ 3.141533, time:  1.168
+ 32 processes: pi ~ 3.141559, time:  1.292
+ 32 processes: pi ~ 3.141683, time:  1.290
+ 32 processes: pi ~ 3.141571, time:  1.294
+ 32 processes: pi ~ 3.141555, time:  1.248
+ 32 processes: pi ~ 3.141669, time:  1.322
+ 32 processes: pi ~ 3.141533, time:  1.313
+ 32 processes: pi ~ 3.141565, time:  1.293
+ 64 processes: pi ~ 3.141574, time:  0.658
+ 64 processes: pi ~ 3.141484, time:  0.661
+ 64 processes: pi ~ 3.141647, time:  0.658
+ 64 processes: pi ~ 3.141612, time:  0.658
+ 64 processes: pi ~ 3.141708, time:  0.658
+ 64 processes: pi ~ 3.141532, time:  0.658
+ 64 processes: pi ~ 3.141620, time:  0.658
+ 64 processes: pi ~ 3.141530, time:  0.659
+ 64 processes: pi ~ 3.141588, time:  0.658
+ 64 processes: pi ~ 3.141659, time:  0.661
+128 processes: pi ~ 3.141542, time:  0.646
+128 processes: pi ~ 3.141623, time:  0.634
+128 processes: pi ~ 3.141647, time:  0.635
+128 processes: pi ~ 3.141589, time:  0.628
+128 processes: pi ~ 3.141507, time:  0.645
+128 processes: pi ~ 3.141505, time:  0.650
+128 processes: pi ~ 3.141498, time:  0.638
+128 processes: pi ~ 3.141607, time:  0.624
+128 processes: pi ~ 3.141497, time:  0.649
+128 processes: pi ~ 3.141659, time:  0.631

@@ -48,28 +48,29 @@ int main(int argc, char* argv[])
             local_count++;
         }
     }
-    MPI_Request requests_vec[size-1];
+    
     // Gather data on rank 0
     if (rank == 0) {
-	     int count_vec[size-1];
+	     int count_vec[size];
+        MPI_Request requests_vec[size-1];
 	     int global_count = 0;
 	
 	     // first, consider rank0 contribution
-	     global_count += local_count;
+	     count_vec[0] = local_count;
 	     for (i=1; i < size; i++) { // Non-blocking receive (in parallel)
-	         MPI_Irecv(&count_vec[i-1],1,MPI_INT, i, 0, MPI_COMM_WORLD, &requests_vec[i-1]);
+	         MPI_Irecv(&count_vec[i],1,MPI_INT, i, 0, MPI_COMM_WORLD, &requests_vec[i-1]);
 	     }
         for (i=1; i < size; i++) { // Wait for each rank
 	         MPI_Wait(&requests_vec[i-1], MPI_STATUSES_IGNORE);
 	     }
-        for (i=0; i < size-1; i++) { // Sum up the contributions (from rank 0 already considered)
+        for (i=0; i < size; i++) { // Sum up the contributions (from rank 0 already considered)
 	         global_count += count_vec[i]; 
 	     }
 	     // Estimate Pi and display the result
 	     pi = ((double)global_count / (double)NUM_ITER) * 4.0;
     }
     else { // Non-blocking send from other processes
-	     MPI_Isend(&local_count,1,MPI_INT, 0, 0, MPI_COMM_WORLD, &requests_vec[rank]);
+	     MPI_Send(&local_count,1,MPI_INT, 0, 0, MPI_COMM_WORLD);
     }
 
     stop_time = MPI_Wtime();
@@ -83,4 +84,3 @@ int main(int argc, char* argv[])
     
     return 0;
 }
-
