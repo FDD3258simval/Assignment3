@@ -60,10 +60,10 @@ int main(int argc, char* argv[])
 	     for (i=1; i < size; i++) { // Non-blocking receive (in parallel)
 	         MPI_Irecv(&count_vec[i],1,MPI_INT, i, 0, MPI_COMM_WORLD, &requests_vec[i-1]);
 	     }
-        for (i=1; i < size; i++) { // Wait for each rank
+             for (i=1; i < size; i++) { // Wait for each rank
 	         MPI_Wait(&requests_vec[i-1], MPI_STATUSES_IGNORE);
 	     }
-        for (i=0; i < size; i++) { // Sum up the contributions (from rank 0 already considered)
+             for (i=0; i < size; i++) { // Sum up the contributions (from rank 0 already considered)
 	         global_count += count_vec[i]; 
 	     }
 	     // Estimate Pi and display the result
